@@ -1,0 +1,1638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voltrim Video Downloader - User Manual v1.2</title>
+    <style>
+   /* ============================================================
+   VOLTRIM USER MANUAL - ENHANCED VISUAL STYLES v1.3
+   Modern, Professional Design System
+   ============================================================ */
+
+:root {
+    /* Modern Color Palette */
+    --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --dark-gradient: linear-gradient(135deg, #2d3748 0%, #1a202c 100%);
+    --success-gradient: linear-gradient(135deg, #48bb78 0%, #38a169 100%);
+    --danger-gradient: linear-gradient(135deg, #f56565 0%, #e53e3e 100%);
+    --warning-gradient: linear-gradient(135deg, #f6ad55 0%, #ed8936 100%);
+    --info-gradient: linear-gradient(135deg, #4299e1 0%, #3182ce 100%);
+    
+    /* Colors */
+    --primary-color: #667eea;
+    --secondary-color: #764ba2;
+    --success-color: #48bb78;
+    --danger-color: #f56565;
+    --warning-color: #f6ad55;
+    --info-color: #4299e1;
+    --text-dark: #1a202c;  /* ENHANCED: Much darker for better readability */
+    --text-medium: #2d3748;  /* ENHANCED: Darker */
+    --text-light: #4a5568;  /* ENHANCED: Darker than before */
+    --border-color: #e2e8f0;
+    --bg-light: #f7fafc;
+    --bg-white: #ffffff;
+    
+    /* Shadows */
+    --shadow-sm: 0 2px 8px rgba(0,0,0,0.08);
+    --shadow-md: 0 4px 16px rgba(0,0,0,0.1);
+    --shadow-lg: 0 10px 30px rgba(0,0,0,0.15);
+    --shadow-xl: 0 15px 50px rgba(0,0,0,0.2);
+    
+    /* Transitions */
+    --transition-fast: all 0.2s ease;
+    --transition-normal: all 0.3s ease;
+    --transition-slow: all 0.5s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+    line-height: 1.8;
+    color: var(--text-dark);
+    background: var(--primary-gradient);
+    padding: 20px;
+    font-size: 16px;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    background: var(--bg-white);
+    border-radius: 20px;
+    box-shadow: var(--shadow-xl);
+    overflow: hidden;
+    animation: fadeIn 0.6s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ============================================================
+   HEADER - Modern Hero Section
+   ============================================================ */
+
+.header {
+    background: var(--dark-gradient);
+    color: white;
+    padding: 60px 50px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+    opacity: 0.5;
+}
+
+.header-logo {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 30px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(15px);
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+    position: relative;
+    z-index: 1;
+    border: 2px solid rgba(255,255,255,0.1);
+    transition: var(--transition-normal);
+}
+
+.header-logo:hover {
+    transform: scale(1.05) rotate(2deg);
+    box-shadow: 0 15px 50px rgba(0,0,0,0.5);
+}
+
+.header-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 0px;
+}
+
+.header h1 {
+    font-size: 3.2em;
+    margin-bottom: 15px;
+    text-shadow: 3px 3px 6px rgba(0,0,0,0.4);
+    position: relative;
+    z-index: 1;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    color: white;  /* FIXED: Explicitly white */
+}
+
+.header p {
+    font-size: 1.3em;
+    opacity: 0.95;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1;
+    font-weight: 300;
+    color: white;  /* FIXED: Explicitly white */
+}
+
+.version {
+    display: inline-block;
+    background: var(--primary-gradient);
+    padding: 10px 25px;
+    border-radius: 30px;
+    margin-top: 15px;
+    font-size: 1em;
+    font-weight: 600;
+    position: relative;
+    z-index: 1;
+    box-shadow: var(--shadow-md);
+    border: 2px solid rgba(255,255,255,0.2);
+    transition: var(--transition-normal);
+    color: white;  /* FIXED: Explicitly white */
+}
+
+.version:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lg);
+}
+
+.new-badge {
+    display: inline-block;
+    background: var(--success-gradient);
+    color: white;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.85em;
+    margin-left: 12px;
+    font-weight: bold;
+    animation: pulse 2s infinite;
+    box-shadow: 0 4px 15px rgba(72, 187, 120, 0.4);
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.85; transform: scale(1.05); }
+}
+
+/* ============================================================
+   CONTENT AREA
+   ============================================================ */
+
+.content {
+    padding: 60px 50px;
+    background: linear-gradient(to bottom, #ffffff 0%, #f7fafc 100%);
+}
+
+/* Add visual interest to sections */
+section {
+    padding: 30px 0;
+    position: relative;
+}
+
+section:nth-child(even) {
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.02) 0%, rgba(118, 75, 162, 0.02) 100%);
+    padding: 40px 30px;
+    border-radius: 15px;
+    margin: 20px -30px;
+}
+
+section:nth-child(odd) {
+    padding: 40px 0;
+}
+
+/* ============================================================
+   TABLE OF CONTENTS - Interactive Card
+   ============================================================ */
+
+.toc {
+    background: linear-gradient(135deg, #f0f4ff 0%, #e6efff 100%);
+    border-left: 6px solid var(--primary-color);
+    padding: 35px;
+    margin-bottom: 50px;
+    border-radius: 15px;
+    box-shadow: var(--shadow-md);
+    transition: var(--transition-normal);
+}
+
+.toc:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-3px);
+}
+
+.toc h2 {
+    color: var(--primary-color);
+    margin-bottom: 25px;
+    font-size: 1.8em;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.toc ul {
+    list-style: none;
+}
+
+.toc li {
+    margin: 12px 0;
+    padding-left: 25px;
+    position: relative;
+    transition: var(--transition-fast);
+}
+
+.toc li:hover {
+    padding-left: 30px;
+}
+
+.toc li::before {
+    content: "▸";
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 1.2em;
+    transition: var(--transition-fast);
+}
+
+.toc li:hover::before {
+    transform: translateX(3px);
+}
+
+.toc a {
+    color: var(--text-dark);
+    text-decoration: none;
+    transition: var(--transition-fast);
+    font-size: 1.05em;
+    font-weight: 500;
+    display: inline-block;
+}
+
+.toc a:hover {
+    color: var(--primary-color);
+    transform: translateX(5px);
+}
+
+/* ============================================================
+   TYPOGRAPHY - Professional Hierarchy
+   ============================================================ */
+
+h2 {
+    color: #1a202c;  /* ENHANCED: Much darker for impact */
+    margin: 60px 0 30px 0;
+    padding-bottom: 15px;
+    border-bottom: 3px solid transparent;
+    background: linear-gradient(to right, var(--primary-color), var(--secondary-color)) left bottom no-repeat;
+    background-size: 100% 3px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 2em;
+    font-weight: 700;
+    position: relative;
+    animation: slideIn 0.5s ease;
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateX(-20px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+h2::before {
+    content: '';
+    width: 10px;
+    height: 40px;
+    background: var(--primary-gradient);
+    border-radius: 6px;
+    box-shadow: var(--shadow-sm);
+}
+
+h3 {
+    color: #1a202c;  /* ENHANCED: Darker for better visibility */
+    margin: 40px 0 20px 0;
+    font-size: 1.5em;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+h3::before {
+    content: '→';
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+h4 {
+    color: #2d3748;  /* ENHANCED: Darker */
+    margin: 25px 0 15px 0;
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+p {
+    margin-bottom: 15px;
+    color: #1a202c;  /* ENHANCED: Much darker, more readable */
+    line-height: 1.9;
+    font-size: 16px;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+strong {
+    color: #1a202c;  /* ENHANCED: Darker for emphasis */
+    font-weight: 700;  /* Bolder */
+}
+
+/* Enhanced list styling */
+ul, ol {
+    margin: 20px 0;
+    padding-left: 30px;
+    color: #1a202c;  /* ENHANCED: Darker text */
+}
+
+ul li, ol li {
+    margin: 12px 0;
+    color: #1a202c;  /* ENHANCED: Darker list items */
+    line-height: 1.8;
+    font-size: 16px;
+}
+
+/* Add bullet point styling for better visual appeal */
+ul li::marker {
+    color: var(--primary-color);  /* Purple bullet points! */
+    font-size: 1.2em;
+}
+
+ol li::marker {
+    color: var(--primary-color);  /* Purple numbers! */
+    font-weight: 700;
+}
+
+/* Enhanced link styling for body content */
+.content a:not(.toc a) {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+    position: relative;
+    transition: var(--transition-fast);
+    border-bottom: 2px solid transparent;
+}
+
+.content a:not(.toc a):hover {
+    color: var(--secondary-color);
+    border-bottom: 2px solid var(--primary-color);
+}
+
+/* Add subtle first letter enhancement for paragraphs after headings */
+h2 + p::first-letter,
+h3 + p::first-letter {
+    font-size: 1.3em;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+/* ============================================================
+   MODERN CARD-STYLE BOXES
+   ============================================================ */
+
+.feature-box, .info-box, .warning-box, .tip-box {
+    border-radius: 15px;
+    padding: 30px;
+    margin: 30px 0;
+    display: flex;
+    gap: 20px;
+    box-shadow: var(--shadow-md);
+    transition: var(--transition-normal);
+    position: relative;
+    overflow: hidden;
+}
+
+.feature-box:hover, .info-box:hover, .warning-box:hover, .tip-box:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-5px);
+}
+
+.feature-box {
+    background: linear-gradient(135deg, #f0fff4 0%, #c6f6d5 100%);
+    border-left: 6px solid var(--success-color);
+}
+
+.feature-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 150px;
+    height: 150px;
+    background: radial-gradient(circle, rgba(72, 187, 120, 0.1) 0%, transparent 70%);
+    border-radius: 50%;
+    transform: translate(50%, -50%);
+}
+
+.info-box {
+    background: linear-gradient(135deg, #ebf8ff 0%, #bee3f8 100%);
+    border-left: 6px solid var(--info-color);
+}
+
+.info-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 150px;
+    height: 150px;
+    background: radial-gradient(circle, rgba(66, 153, 225, 0.1) 0%, transparent 70%);
+    border-radius: 50%;
+    transform: translate(50%, -50%);
+}
+
+.warning-box {
+    background: linear-gradient(135deg, #fff5f5 0%, #fed7d7 100%);
+    border-left: 6px solid var(--danger-color);
+}
+
+.warning-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 150px;
+    height: 150px;
+    background: radial-gradient(circle, rgba(245, 101, 101, 0.1) 0%, transparent 70%);
+    border-radius: 50%;
+    transform: translate(50%, -50%);
+}
+
+.tip-box {
+    background: linear-gradient(135deg, #fffff0 0%, #fefcbf 100%);
+    border-left: 6px solid var(--warning-color);
+}
+
+.tip-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 150px;
+    height: 150px;
+    background: radial-gradient(circle, rgba(246, 173, 85, 0.1) 0%, transparent 70%);
+    border-radius: 50%;
+    transform: translate(50%, -50%);
+}
+
+.box-icon {
+    font-size: 2.5em;
+    min-width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: var(--shadow-sm);
+    position: relative;
+    z-index: 1;
+}
+
+.box-content {
+    flex: 1;
+    position: relative;
+    z-index: 1;
+}
+
+.box-content h4 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.3em;
+    color: #1a202c;  /* ENHANCED: Darker */
+    font-weight: 700;
+}
+
+.box-content ul, .box-content ol {
+    margin: 15px 0;
+    padding-left: 25px;
+}
+
+.box-content li {
+    margin: 10px 0;
+    color: #1a202c;  /* ENHANCED: Darker, more readable */
+    line-height: 1.8;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.box-content p {
+    margin: 12px 0;
+    color: #1a202c;  /* ENHANCED: Darker, more readable */
+    font-size: 15px;
+}
+
+.box-content strong {
+    color: #1a202c;
+    font-weight: 700;
+}
+
+/* ============================================================
+   TABLES - Modern Data Display
+   ============================================================ */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 30px 0;
+    box-shadow: var(--shadow-md);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+th {
+    background: var(--primary-gradient);
+    color: white;
+    padding: 20px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 1.05em;
+    letter-spacing: 0.3px;
+}
+
+td {
+    padding: 18px 20px;
+    border-bottom: 1px solid var(--border-color);
+    color: #1a202c;  /* ENHANCED: Darker, more readable */
+    font-size: 15px;
+    font-weight: 400;
+}
+
+tr:nth-child(even) {
+    background: var(--bg-light);
+}
+
+tr:hover {
+    background: #e6efff;
+    transition: var(--transition-fast);
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+/* ============================================================
+   CODE BLOCKS - Developer Friendly
+   ============================================================ */
+
+code {
+    background: linear-gradient(135deg, #2d3748 0%, #1a202c 100%);
+    color: #68d391;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+    font-size: 0.9em;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.3);
+    border: 1px solid rgba(255,255,255,0.1);
+    font-weight: 600;
+}
+
+/* Enhanced blockquote styling */
+blockquote {
+    margin: 25px 0;
+    padding: 20px 25px;
+    background: linear-gradient(135deg, #f0f4ff 0%, #e6efff 100%);
+    border-left: 5px solid var(--primary-color);
+    border-radius: 8px;
+    font-style: italic;
+    color: #1a202c;
+    box-shadow: var(--shadow-sm);
+}
+
+blockquote p {
+    margin: 0;
+    color: #1a202c;
+}
+
+/* Highlight important text */
+mark {
+    background: linear-gradient(135deg, #fef5e7 0%, #fdeaa3 100%);
+    color: #1a202c;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+/* ============================================================
+   FOOTER - Professional Closure
+   ============================================================ */
+
+.footer {
+    background: var(--dark-gradient);
+    color: white;
+    padding: 50px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+    opacity: 0.3;
+}
+
+.footer p {
+    margin: 10px 0;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    color: white;  /* FIXED: Explicitly white */
+}
+
+.footer strong {
+    color: white;  /* FIXED: Strong text also white */
+}
+
+.footer a {
+    color: white;
+    text-decoration: underline;
+    transition: var(--transition-fast);
+}
+
+.footer a:hover {
+    color: var(--primary-color);
+}
+
+/* ============================================================
+   BACK TO TOP BUTTON - Floating Action
+   ============================================================ */
+
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: var(--primary-gradient);
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    box-shadow: var(--shadow-lg);
+    transition: var(--transition-normal);
+    font-size: 1.8em;
+    font-weight: bold;
+    z-index: 1000;
+}
+
+.back-to-top:hover {
+    background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+    transform: translateY(-8px) scale(1.1);
+    box-shadow: 0 12px 40px rgba(102, 126, 234, 0.5);
+}
+
+/* ============================================================
+   SCREENSHOTS & IMAGES
+   ============================================================ */
+
+.screenshot, .screenshot-medium, .screenshot-small {
+    max-width: 700px;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 30px auto;
+    border-radius: 12px;
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--border-color);
+    transition: var(--transition-normal);
+}
+
+.screenshot:hover, .screenshot-medium:hover, .screenshot-small:hover {
+    transform: scale(1.02);
+    box-shadow: var(--shadow-lg);
+}
+
+.screenshot-medium {
+    max-width: 600px;
+}
+
+.screenshot-small {
+    max-width: 500px;
+}
+
+.image-container {
+    width: 100%;
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 0;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--border-color);
+}
+
+/* ============================================================
+   RESPONSIVE DESIGN - Mobile Optimization
+   ============================================================ */
+
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    
+    .container {
+        border-radius: 15px;
+    }
+    
+    .header {
+        padding: 40px 30px;
+    }
+    
+    .header h1 {
+        font-size: 2.2em;
+    }
+    
+    .header-logo {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .content {
+        padding: 40px 25px;
+    }
+    
+    .toc {
+        padding: 25px;
+    }
+    
+    h2 {
+        font-size: 1.6em;
+        margin: 40px 0 20px 0;
+    }
+    
+    h3 {
+        font-size: 1.3em;
+    }
+    
+    .feature-box, .info-box, .warning-box, .tip-box {
+        padding: 20px;
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .box-icon {
+        margin: 0 auto;
+    }
+    
+    .screenshot, .screenshot-medium, .screenshot-small {
+        margin: 20px auto;
+        border-radius: 10px;
+    }
+    
+    .back-to-top {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5em;
+        bottom: 20px;
+        right: 20px;
+    }
+    
+    table {
+        font-size: 0.9em;
+    }
+    
+    th, td {
+        padding: 12px 10px;
+    }
+}
+
+/* ============================================================
+   PRINT STYLES - Professional Documentation
+   ============================================================ */
+
+@media print {
+    body {
+        background: white;
+        padding: 0;
+    }
+    
+    .container {
+        box-shadow: none;
+        border-radius: 0;
+    }
+    
+    .back-to-top {
+        display: none !important;
+    }
+    
+    .header {
+        page-break-after: avoid;
+    }
+    
+    h2, h3 {
+        page-break-after: avoid;
+    }
+    
+    .feature-box, .info-box, .warning-box, .tip-box,
+    table, .screenshot {
+        page-break-inside: avoid;
+    }
+}
+
+/* ============================================================
+   ACCESSIBILITY - Enhanced UX
+   ============================================================ */
+
+*:focus {
+    outline: 3px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+a:focus, button:focus {
+    outline: 3px solid var(--primary-color);
+    outline-offset: 3px;
+}
+
+/* Smooth scroll behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Selection styling */
+::selection {
+    background: var(--primary-color);
+    color: white;
+}
+
+::-moz-selection {
+    background: var(--primary-color);
+    color: white;
+}
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="header-logo">
+                <img src="manual-assets/Voltrim-logo.png" alt="Voltrim Logo" onerror="this.style.display='none'">
+            </div>
+            
+            <h1>Voltrim Downloader</h1>
+            <p>Complete User Manual</p>
+            <span class="version">Version 1.0.1 | Manual v1.2</span>
+        </div>
+        
+        <div class="content">
+            <div class="toc">
+                <h2>📋 Table of Contents</h2>
+                <ul>
+                    <li><a href="#important-notice">1. Important Legal Notice</a></li>
+                    <li><a href="#welcome">2. Welcome</a></li>
+                    <li><a href="#requirements">3. System Requirements</a></li>
+                    <li><a href="#getting-started">4. Getting Started</a></li>
+                    <li><a href="#interface">5. Interface Overview</a></li>
+                    <li><a href="#downloading">6. How to Download Videos</a></li>
+                    <li><a href="#quality">7. Quality Options</a></li>
+                    <li><a href="#features">8. Advanced Features</a></li>
+                    <li><a href="#troubleshooting">9. Troubleshooting</a></li>
+                    <li><a href="#faq">10. FAQ</a></li>
+                    <li><a href="#tips">11. Tips & Best Practices</a></li>
+                </ul>
+            </div>
+                      
+            <section id="important-notice">
+                <h2>⚠️ Important Legal Notice</h2>
+                
+                <div class="warning-box">
+                    <div class="box-icon">⚖️</div>
+                    <div class="box-content">
+                        <p style="color: #f56565; font-size: 1.2em; font-weight: bold;">CRITICAL: The following major platforms PROHIBIT downloading in their Terms of Service:</p>
+                        
+                        <ul style="margin: 15px 0; padding-left: 20px;">
+                            <li><strong>YouTube</strong> - Prohibits downloading except through YouTube Premium offline feature</li>
+                            <li><strong>Instagram</strong> - Prohibits downloading, copying, or saving others' content</li>
+                            <li><strong>TikTok</strong> - Prohibits downloading unless creator enabled the download feature</li>
+                            <li><strong>Netflix, Hulu, Disney+</strong> - All major streaming services prohibit downloading</li>
+                            <li><strong>Facebook, Twitter/X</strong> - Social media platforms prohibit downloading</li>
+                        </ul>
+                        
+                        <p style="color: #f56565; font-weight: bold;">This list is NOT exhaustive. Many other platforms have similar restrictions.</p>
+                        
+                        <p style="margin-top: 15px;"><strong>Before using Voltrim:</strong> You MUST verify you have explicit permission to download content and that the platform's Terms of Service allow it. You are solely responsible for legal compliance.</p>
+                        
+                        <p style="margin-top: 10px; font-size: 1.05em;"><strong>Technical capability does NOT equal legal permission.</strong></p>
+                        
+                        <p style="margin-top: 10px;"><strong>See the complete Legal Disclaimer at the bottom of this manual for full terms.</strong></p>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="welcome">
+                <h2>Welcome to Voltrim</h2>
+                <p>Thank you for choosing <strong>Voltrim Video Downloader</strong>! This application is designed for downloading videos from platforms where you have explicit permission to do so.</p>
+                
+                <div class="feature-box">
+                    <div class="box-icon">✨</div>
+                    <div class="box-content">
+                        <h4>Key Features</h4>
+                        <ul>
+                            <li>Download from various video hosting platforms (where permitted)</li>
+                            <li>Multiple quality options (Best, 1080p, 720p, Audio-only)</li>
+                            <li>Pause and resume downloads without losing progress</li>
+                            <li>Smart duplicate detection with file overwrite options</li>
+                            <li>Video thumbnail preview during downloads</li>
+                            <li>Custom save location with visual path display</li>
+                            <li>Automatic dependency management</li>
+                            <li>Built-in update checker</li>
+                            <li>Modern, enhanced interface with hover effects and better visual feedback</li>
+                            <li>Integrated user manual (F1 key or header button)</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="info-box">
+                    <div class="box-icon">ℹ️</div>
+                    <div class="box-content">
+                        <strong>Remember:</strong> Just because Voltrim CAN download from a platform does NOT mean you are legally permitted to do so. Always verify permissions before downloading any content.
+                    </div>
+                </div>
+            </section>
+            
+            <section id="requirements">
+                <h2>System Requirements</h2>
+                <table>
+                    <tr>
+                        <th>Component</th>
+                        <th>Minimum</th>
+                        <th>Recommended</th>
+                    </tr>
+                    <tr>
+                        <td>Operating System</td>
+                        <td>Windows 10 (64-bit)</td>
+                        <td>Windows 10/11 (64-bit)</td>
+                    </tr>
+                    <tr>
+                        <td>RAM</td>
+                        <td>2 GB</td>
+                        <td>4 GB or more</td>
+                    </tr>
+                    <tr>
+                        <td>Disk Space</td>
+                        <td>500 MB</td>
+                        <td>1 GB or more</td>
+                    </tr>
+                    <tr>
+                        <td>Internet</td>
+                        <td>Active connection</td>
+                        <td>Broadband</td>
+                    </tr>
+                </table>
+            </section>
+            
+            <section id="getting-started">
+                <h2>Getting Started</h2>
+                
+                <h3>First Launch</h3>
+                <div class="info-box">
+                    <div class="box-icon">ℹ️</div>
+                    <div class="box-content">
+                        <p><strong>On first launch:</strong> Voltrim will automatically download required components (yt-dlp and FFmpeg). This one-time process takes 1-3 minutes depending on your internet speed.</p>
+                        
+                        <p>You'll see progress messages like:</p>
+                        <ul>
+                            <li>"Checking components..."</li>
+                            <li>"Downloading yt-dlp..."</li>
+                            <li>"Downloading FFmpeg..."</li>
+                            <li><span style="color: #48bb78; font-weight: bold;">"Ready! Enter URL and click Download"</span> (in green)</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <h3>Quick Start</h3>
+                <ol class="steps">
+                    <li><strong>Launch Voltrim:</strong> Double-click Voltrim.exe</li>
+                    <li><strong>Wait for Ready:</strong> Components download automatically (first time only)</li>
+                    <li><strong>Paste URL:</strong> Copy video URL and paste into the "Video URL" field</li>
+                    <li><strong>Select Quality:</strong> Choose from dropdown (Best Quality, 1080p, 720p, or Audio MP3)</li>
+                    <li><strong>Click Download:</strong> The green DOWNLOAD button starts the process</li>
+                    <li><strong>Monitor Progress:</strong> Watch the progress bar and log window</li>
+                </ol>
+            </section>
+            
+            <section id="interface">
+                <h2>Interface Overview</h2>
+				<!--IMAGE SIZES-->
+				
+                <!--<img src="manual-assets/interface.png" alt="Voltrim Interface" class="screenshot">700px max-->
+				<!--<img src="manual-assets/interface.png" alt="Voltrim Interface" class="screenshot-small">500px max-->
+				<!--<img src="manual-assets/interface.png" alt="Voltrim Interface" class="screenshot-medium">600px max-->
+				<!--<img src="manual-assets/interface.png" alt="Voltrim Interface" class="screenshot" style="max-width: 400px;">-->
+				
+				<img src="manual-assets/interface.png" alt="Voltrim Interface" class="screenshot-medium">
+				<!--IMAGE DESCRIPTION-->
+				<p style="text-align: center; color: #718096; font-style: italic;">Main application interface</p>
+                <h3>Header Section</h3>
+                <ul>
+                    <li><strong>Voltrim Logo:</strong> Application branding with modern icon</li>
+                    <li><strong>USER MANUAL Button:</strong> Opens this manual in your browser (also accessible via F1)</li>
+                    <li><strong>EXIT Button:</strong> Safely closes the application with confirmation</li>
+                </ul>
+                
+                <h3>Input Section</h3>
+                <ul>
+                    <li><strong>Video URL Field:</strong> Paste your video link here</li>
+                    <li><strong>Quality Dropdown:</strong> Select desired video quality or audio-only format</li>
+                </ul>
+                
+                <h3>Control Buttons</h3>
+                <table>
+                    <tr>
+                        <th>Button</th>
+                        <th>Function</th>
+                        <th>Status</th>
+                    </tr>
+                    <tr>
+                        <td><strong>DOWNLOAD</strong></td>
+                        <td>Starts the download process</td>
+                        <td>Blue when ready, gray when disabled</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PAUSE</strong></td>
+                        <td>Suspends download (becomes RESUME when paused)</td>
+                        <td>Enabled during downloads</td>
+                    </tr>
+                    <tr>
+                        <td><strong>CANCEL</strong></td>
+                        <td>Stops download and resets interface</td>
+                        <td>Enabled during downloads</td>
+                    </tr>
+                    <tr>
+                        <td><strong>CHECK UPDATES</strong></td>
+                        <td>Updates yt-dlp to latest version</td>
+                        <td>Always available when not downloading</td>
+                    </tr>
+                </table>
+                
+                <h3>Save Location Section</h3>
+                <ul>
+                    <li><strong>Save Location Display:</strong> Shows current download folder path</li>
+                    <li><strong>CHANGE FOLDER Button:</strong> Browse to select different download location</li>
+                </ul>
+                
+                <h3>Progress Section</h3>
+                <ul>
+                    <li><strong>Status Message:</strong> Real-time updates on download progress that shows in green when ready</li>
+                    <li><strong>Progress Bar:</strong> Visual representation of download completion</li>
+                </ul>
+                
+                <h3>Content Panel</h3>
+                <ul>
+                    <li><strong>Log Window:</strong> Detailed technical information and progress updates</li>
+                    <li><strong>Thumbnail Preview:</strong> Video thumbnail appears during download</li>
+                    <li><strong>Success Panel:</strong> Appears when download completes with "Open Folder" and "New Download" buttons</li>
+                </ul>
+                
+                <h3>🆕 Enhanced Visual Features</h3>
+                <div class="feature-box">
+                    <div class="box-icon">🎨</div>
+                    <div class="box-content">
+                        <ul>
+                            <li><strong>Hover Effects:</strong> All buttons light up when you move your mouse over them</li>
+                            <li><strong>Modern Colors:</strong> Darker backgrounds (18,18,18) with vibrant accent colors</li>
+                            <li><strong>Bigger Title:</strong> 18pt bold title for better readability</li>
+                            <li><strong>Subtle Separator:</strong> Thin line under header for visual organization</li>
+                            <li><strong>Enhanced Buttons:</strong> Blue (37,99,235), Green (34,197,94), Orange (249,115,22)</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="downloading">
+                <h2>How to Download Videos</h2>
+                
+                <h3>Step-by-Step Download Process</h3>
+                
+                <ol class="steps">
+                    <li>
+                        <strong>Copy Video URL</strong>
+                        <p>Navigate to the video you want to download, copy its URL from your browser's address bar.</p>
+                    </li>
+                    
+                    <li>
+                        <strong>Paste URL into Voltrim</strong>
+                        <p>Click in the "Video URL" field and paste (Ctrl+V) the copied URL.</p>
+                    </li>
+                    
+                    <li>
+                        <strong>Select Quality</strong>
+                        <p>Choose your desired quality from the dropdown menu (Best Quality, 1080p MP4, 720p MP4, or Audio MP3).</p>
+                    </li>
+                    
+                    <li>
+                        <strong>(Optional) Change Save Location</strong>
+                        <p>Click "CHANGE FOLDER" if you want to save to a different location.</p>
+                    </li>
+                    
+                    <li>
+                        <strong>Duplicate Detection Check</strong>
+                        <p>Click the blue "DOWNLOAD" button. Voltrim will now check if the file already exists:</p>
+                        <ul>
+                            <li>
+                                <strong>If file exists:</strong> A dialog appears showing file details and asking what to do:
+                                <ul>
+                                    <li><strong>YES:</strong> Skip download and keep existing file</li>
+                                    <li><strong>NO:</strong> Delete old file and download fresh</li>
+                                    <li><strong>CANCEL:</strong> Cancel this download</li>
+                                </ul>
+                            </li>
+                            <li><strong>If file doesn't exist:</strong> Download starts immediately</li>
+                        </ul>
+                    </li>
+                    
+                    <li>
+                        <strong>Monitor Progress</strong>
+                        <p>Watch the progress bar and log window for real-time updates. The status message will show percentage complete.</p>
+                    </li>
+                    
+                    <li>
+                        <strong>Download Completes</strong>
+                        <p>When done, you'll see a green success panel with options to "Open Folder" or start a "New Download".</p>
+                    </li>
+                </ol>
+                
+                <div class="info-box">
+                    <div class="box-icon">💡</div>
+                    <div class="box-content">
+                        <h4>Duplicate Detection Example</h4>
+                        <p>If you try to download a video that already exists, you'll see:</p>
+                        <code style="display: block; padding: 15px; margin: 10px 0; line-height: 1.6;">
+                            File: My_Video.mp4<br>
+                            Size: 25.5 MB<br>
+                            Modified: 2025-01-15 10:30 AM<br><br>
+                            What would you like to do?
+                        </code>
+                        <p style="margin-top: 10px;">This prevents accidental re-downloads and file corruption!</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="quality">
+                <h2>Quality Options</h2>
+                
+                <table>
+                    <tr>
+                        <th>Option</th>
+                        <th>Description</th>
+                        <th>Best For</th>
+                    </tr>
+                    <tr>
+                        <td><strong>Best Quality</strong></td>
+                        <td>Highest available resolution with best audio</td>
+                        <td>Archiving your own content, maximum quality</td>
+                    </tr>
+                    <tr>
+                        <td><strong>1080p MP4</strong></td>
+                        <td>Full HD (1920x1080) video</td>
+                        <td>High-quality playback on modern devices</td>
+                    </tr>
+                    <tr>
+                        <td><strong>720p MP4</strong></td>
+                        <td>HD (1280x720) video</td>
+                        <td>Balanced quality and file size</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Audio MP3</strong></td>
+                        <td>Audio only, no video</td>
+                        <td>Music, podcasts, audio content</td>
+                    </tr>
+                </table>
+            </section>
+            
+            <section id="features">
+                <h2>Advanced Features</h2>
+                
+                <h3>Pause and Resume</h3>
+                <div class="feature-box">
+                    <div class="box-icon">⏯️</div>
+                    <div class="box-content">
+                        <p><strong>How it works:</strong></p>
+                        <ul>
+                            <li>Click <strong>PAUSE</strong> during a download to temporarily suspend it</li>
+                            <li>Button changes to <strong>RESUME</strong></li>
+                            <li>Click <strong>RESUME</strong> to continue from where you left off</li>
+                            <li>No data is lost - downloads resume exactly where paused</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <h3>🆕 Duplicate Detection</h3>
+                <div class="feature-box">
+                    <div class="box-icon">🔍</div>
+                    <div class="box-content">
+                        <p><strong>Smart File Protection:</strong></p>
+                        <ul>
+                            <li>Automatically checks if file already exists before downloading</li>
+                            <li>Shows file size and last modified date</li>
+                            <li>Gives you three options: Skip, Overwrite, or Cancel</li>
+                            <li>Prevents accidental bandwidth waste</li>
+                            <li>Protects against file corruption from interrupted downloads</li>
+                        </ul>
+                        <p style="margin-top: 10px;"><strong>Note:</strong> Different quality settings create separate files (e.g., 1080p and 720p versions can coexist).</p>
+                    </div>
+                </div>
+                
+                <h3>Cancel Download</h3>
+                <div class="info-box">
+                    <div class="box-icon">🛑</div>
+                    <div class="box-content">
+                        <p><strong>Changed your mind?</strong></p>
+                        <ul>
+                            <li>Click <strong>CANCEL</strong> to stop the current download</li>
+                            <li>Interface resets immediately - ready for a new download</li>
+                            <li>Progress is not saved (use PAUSE if you plan to resume)</li>
+                            <li>Partial downloads are automatically cleaned up</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <h3>Custom Save Location</h3>
+                <p>Choose where your videos are saved:</p>
+                <ul>
+                    <li>Click <strong>CHANGE FOLDER</strong> button</li>
+                    <li>Browse to your desired location</li>
+                    <li>Location is saved for future downloads</li>
+                    <li>Current path is always visible</li>
+                </ul>
+                
+                <h3>Automatic Component Updates</h3>
+                <p>Keep yt-dlp up to date for best compatibility:</p>
+                <ul>
+                    <li>Click <strong>CHECK UPDATES</strong> button</li>
+                    <li>Application automatically downloads latest version</li>
+                    <li>Recommended to update monthly</li>
+                    <li>Updates ensure compatibility with video platforms</li>
+                </ul>
+            </section>
+            
+            <section id="troubleshooting">
+                <h2>Troubleshooting</h2>
+                
+                <h3>Download Fails or Errors</h3>
+                <div class="warning-box">
+                    <div class="box-icon">⚠️</div>
+                    <div class="box-content">
+                        <h4>Common Solutions:</h4>
+                        <ul>
+                            <li><strong>Update Components:</strong> Click "CHECK UPDATES" to get latest yt-dlp version</li>
+                            <li><strong>Check URL:</strong> Ensure the URL is correct and the video is still available</li>
+                            <li><strong>Platform Changes:</strong> Some platforms change their systems - updates usually fix this</li>
+                            <li><strong>Network Issues:</strong> Check your internet connection</li>
+                            <li><strong>Age Restrictions:</strong> Some videos may require authentication</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <h3>Slow Download Speed</h3>
+                <ul>
+                    <li>Check your internet connection speed</li>
+                    <li>Close other bandwidth-intensive applications</li>
+                    <li>Try downloading at different times</li>
+                    <li>Source platform's server speed may limit downloads</li>
+                </ul>
+                
+                <h3>Application Won't Start</h3>
+                <ul>
+                    <li>Ensure you're running Windows 10/11 64-bit</li>
+                    <li>Check antivirus hasn't quarantined the application</li>
+                    <li>Run as administrator if needed</li>
+                    <li>Verify .NET Framework is installed (usually pre-installed on Windows 10/11)</li>
+                </ul>
+                
+                <h3>Video Quality Lower Than Expected</h3>
+                <ul>
+                    <li>Not all videos are available in all quality options</li>
+                    <li>Platform may have removed higher quality versions</li>
+                    <li>Try "Best Quality" option for highest available</li>
+                    <li>Check source video quality on the platform</li>
+                </ul>
+            </section>
+            
+            <section id="faq">
+                <h2>Frequently Asked Questions</h2>
+                
+                <h3>Is Voltrim free to use?</h3>
+                <p>Voltrim Video Downloader is commercial software that requires a valid license for use. While Voltrim leverages open-source components (yt-dlp and FFmpeg) in its operation, the Voltrim application itself is a paid product developed and maintained by Voltrim Knowledge.</p>
+                
+                <h3>Do I need to install anything else?</h3>
+                <p>No. Voltrim automatically downloads and manages all required components (yt-dlp and FFmpeg) on first launch.</p>
+                
+                <h3>What video platforms are supported?</h3>
+                <p>Voltrim uses yt-dlp which provides <strong>technical compatibility</strong> with hundreds of websites. However:</p>
+                
+                <div class="warning-box" style="margin: 15px 0;">
+                    <div class="box-icon">⚠️</div>
+                    <div class="box-content">
+                        <p style="color: #f56565; font-weight: bold;">TECHNICAL COMPATIBILITY ≠ LEGAL PERMISSION</p>
+                        
+                        <p><strong>Platforms that PROHIBIT downloading:</strong></p>
+                        <ul>
+                            <li>YouTube (except your own uploads or YouTube Premium offline)</li>
+                            <li>Instagram, TikTok, Facebook, Twitter/X</li>
+                            <li>Netflix, Hulu, Disney+, and all streaming services</li>
+                            <li>Most social media and video sharing platforms</li>
+                        </ul>
+                        
+                        <p style="margin-top: 10px;"><strong>Platforms that MAY permit downloading:</strong></p>
+                        <ul>
+                            <li>Your own uploaded content on any platform</li>
+                            <li>Vimeo (if creator allows downloads)</li>
+                            <li>Internet Archive / Archive.org (public domain content)</li>
+                            <li>Creative Commons licensed content</li>
+                            <li>Your organization's internal video servers</li>
+                        </ul>
+                        
+                        <p style="margin-top: 10px; font-weight: bold;">ALWAYS verify the platform's Terms of Service before downloading.</p>
+                    </div>
+                </div>
+                
+                <h3>Is it legal to download videos?</h3>
+                <p>This depends entirely on:</p>
+                <ul>
+                    <li>The platform's Terms of Service</li>
+                    <li>Copyright laws in your jurisdiction</li>
+                    <li>Whether you have permission from the copyright holder</li>
+                    <li>Your intended use of the downloaded content</li>
+                </ul>
+                
+                <div class="tip-box" style="margin: 15px 0;">
+                    <div class="box-icon">✅</div>
+                    <div class="box-content">
+                        <p><strong>LEGAL Examples (Generally Permitted):</strong></p>
+                        <ul>
+                            <li>Downloading YOUR OWN uploaded videos from any platform</li>
+                            <li>Downloading Creative Commons content (verify license terms)</li>
+                            <li>Downloading public domain content from Internet Archive</li>
+                            <li>Downloading with explicit written permission from copyright holder</li>
+                            <li>Downloading from platforms that explicitly allow it in their ToS</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="warning-box" style="margin: 15px 0;">
+                    <div class="box-icon">❌</div>
+                    <div class="box-content">
+                        <p style="color: #f56565; font-weight: bold;">ILLEGAL Examples (Prohibited):</p>
+                        <ul>
+                            <li>Downloading movies or TV shows from YouTube</li>
+                            <li>Downloading music videos to avoid purchasing</li>
+                            <li>Downloading Instagram posts/stories from other users</li>
+                            <li>Downloading content from Netflix, Hulu, Disney+</li>
+                            <li>Downloading paid course content</li>
+                            <li>Downloading to redistribute as your own</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <p><strong>You are responsible for ensuring your use is legal. See the Legal Disclaimer section. When in doubt, DON'T download.</strong></p>
+                
+                <h3>Can I download age-restricted or private videos?</h3>
+                <p>No. Voltrim does not bypass authentication or access restrictions. You can only download publicly accessible content that you have permission to download.</p>
+                
+                <h3>What should I do before downloading?</h3>
+                <p><strong>BEFORE EVERY DOWNLOAD, ASK YOURSELF:</strong></p>
+                
+                <div class="tip-box" style="margin: 15px 0;">
+                    <div class="box-icon">✓</div>
+                    <div class="box-content">
+                        <h4>Pre-Download Checklist:</h4>
+                        <ol>
+                            <li><strong>Do I own this content OR have I uploaded it myself?</strong></li>
+                            <li><strong>Does the platform's Terms of Service allow downloading?</strong></li>
+                            <li><strong>Do I have written permission from the copyright holder?</strong></li>
+                            <li><strong>Is this content under Creative Commons or Public Domain?</strong></li>
+                            <li><strong>Would downloading this violate any laws or agreements?</strong></li>
+                        </ol>
+                        <p style="margin-top: 10px; color: #f56565; font-weight: bold;">If you answer NO to ALL of these questions, DO NOT DOWNLOAD.</p>
+                    </div>
+                </div>
+                
+                <p><strong>Additional verification steps:</strong></p>
+                <ul>
+                    <li>Read the platform's Terms of Service (ToS) section on downloading</li>
+                    <li>Check for a Creative Commons license indicator</li>
+                    <li>Verify copyright ownership and permissions</li>
+                    <li>Document any permissions you receive in writing</li>
+                    <li>When in doubt, seek legal advice or written permission from the content owner</li>
+                </ul>
+                
+                <h3>Will this work with all video formats?</h3>
+                <p>Voltrim downloads videos in the formats provided by the source platform. The quality options (Best, 1080p, 720p, Audio MP3) determine the output format and resolution.</p>
+            </section>
+            
+            <section id="tips">
+                <h2>Tips & Best Practices</h2>
+                
+                <div class="tip-box">
+                    <div class="box-icon">💡</div>
+                    <div class="box-content">
+                        <h4>Maximize Your Experience</h4>
+                        <ul>
+                            <li><strong>Verify First:</strong> Always check Terms of Service before downloading</li>
+                            <li><strong>Keep Updated:</strong> Check for component updates monthly</li>
+                            <li><strong>Choose Wisely:</strong> Best Quality for archiving your own content, 720p for everyday use</li>
+                            <li><strong>Use the Manual:</strong> Press <code>F1</code> anytime for help</li>
+                            <li><strong>Be Patient:</strong> Large HD videos take time to download and process</li>
+                            <li><strong>Organize:</strong> Use custom folders for different categories</li>
+                            <li><strong>Respect Rights:</strong> Never redistribute downloaded content without permission</li>
+                            <li><strong>Watch for Duplicates:</strong> Pay attention to duplicate detection dialogs to avoid wasting bandwidth</li>
+                            <li><strong>Use Cancel Wisely:</strong> Changed your mind? Just click CANCEL and start fresh immediately!</li>
+                            <li><strong>Hover for Feedback:</strong> Notice how buttons light up when you hover? This confirms they're clickable!</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <h3>Best Practices for Duplicate Detection</h3>
+                <ol>
+                    <li><strong>Check File Info:</strong> When the duplicate dialog appears, review the file size and date to ensure it's the version you want</li>
+                    <li><strong>Choose Overwrite for Updates:</strong> If the original video was updated on the platform, choose NO (Overwrite) to get the latest version</li>
+                    <li><strong>Choose Skip for Bandwidth:</strong> If the file is correct, choose YES (Skip) to save time and bandwidth</li>
+                    <li><strong>Different Quality = New File:</strong> Changing quality settings will create a new file (e.g., 1080p vs 720p are separate files)</li>
+                </ol>
+                
+                <h3>Best Practices for Legal Compliance</h3>
+                <ol>
+                    <li><strong>Know the Platform Restrictions:</strong> YouTube, Instagram, TikTok, Netflix, Hulu, Disney+, Facebook, and Twitter/X all PROHIBIT downloading. Assume prohibition unless explicitly stated otherwise.</li>
+                    <li><strong>Document Permissions:</strong> Keep records of any permissions you receive to download content (emails, licenses, written agreements)</li>
+                    <li><strong>Read Terms Carefully:</strong> Platform Terms of Service can change - review them regularly before downloading</li>
+                    <li><strong>When in Doubt, Don't Download:</strong> If you're unsure about permissions, ask for clarification first or seek legal advice</li>
+                    <li><strong>Respect Copyright:</strong> Remember that copyright law protects creators' work regardless of technical capability</li>
+                    <li><strong>Personal Use Only:</strong> Unless you have explicit distribution rights, keep downloads private and never redistribute</li>
+                    <li><strong>Check Licenses:</strong> If downloading Creative Commons content, verify the specific license terms (some prohibit commercial use, require attribution, etc.)</li>
+                    <li><strong>Your Content First:</strong> The safest downloads are your own uploads - focus on backing up content you've created</li>
+                    <li><strong>Understand Consequences:</strong> Violations can result in account bans, legal action, lawsuits, and even criminal prosecution in severe cases</li>
+                </ol>
+            </section>
+            
+            <div class="warning-box" style="margin-top: 40px;">
+                <div class="box-icon">⚖️</div>
+                <div class="box-content">
+                    <h3>Legal Disclaimer & Terms of Use</h3>
+                    <p style="color: #f56565; font-size: 1.1em;"><strong>BY USING VOLTRIM VIDEO DOWNLOADER, YOU AGREE TO THE FOLLOWING:</strong></p>
+                    
+                    <h4 style="margin-top: 20px; color: #f56565;">SPECIFIC PLATFORM NOTICE:</h4>
+                    <p><strong>The following major platforms explicitly PROHIBIT downloading videos in their Terms of Service:</strong></p>
+                    <ul style="margin-bottom: 15px;">
+                        <li><strong>YOUTUBE:</strong> Prohibits downloading except through official YouTube Premium offline features. Despite technical compatibility, you do NOT have permission to download YouTube content unless downloading your own uploads or you have explicit written permission from the copyright holder.</li>
+                        <li><strong>INSTAGRAM:</strong> Prohibits downloading, copying, or saving content posted by other users without explicit permission.</li>
+                        <li><strong>TIKTOK:</strong> Prohibits downloading videos unless the creator has enabled the download feature for that specific video.</li>
+                        <li><strong>NETFLIX, HULU, DISNEY+:</strong> All major streaming platforms explicitly prohibit downloading content except through their official apps with active subscriptions.</li>
+                        <li><strong>FACEBOOK, TWITTER/X:</strong> Social media platforms prohibit downloading others' content.</li>
+                    </ul>
+                    <p style="color: #f56565; font-weight: bold;">This list is NOT exhaustive. Many other platforms have similar restrictions.</p>
+                    
+                    <h4 style="margin-top: 20px;">General Terms:</h4>
+                    <ul>
+                        <li><strong>Personal Responsibility:</strong> You are solely responsible for ensuring your use of this software complies with all applicable laws, copyright regulations, and platform terms of service in your jurisdiction.</li>
+                        <li><strong>Permitted Use:</strong> This software is intended ONLY for downloading content you have explicit permission to download, including:
+                            <ul>
+                                <li>Your own uploaded videos</li>
+                                <li>Videos licensed under Creative Commons or Public Domain (verify license terms)</li>
+                                <li>Content where you have written permission from the copyright holder</li>
+                                <li>Content from platforms that explicitly allow downloading in their Terms of Service</li>
+                            </ul>
+                        </li>
+                        <li><strong>Prohibited Use:</strong> Do NOT use this software to:
+                            <ul>
+                                <li>Download copyrighted content without explicit permission</li>
+                                <li>Violate any platform's terms of service</li>
+                                <li>Redistribute downloaded content without authorization</li>
+                                <li>Bypass DRM or content protection systems</li>
+                                <li>Download from platforms that prohibit downloading</li>
+                            </ul>
+                        </li>
+                        <li><strong>No Warranty:</strong> Voltrim Video Downloader is provided "AS IS" without any warranty of any kind. The developer assumes no liability for any misuse or legal consequences resulting from use of this software.</li>
+                        <li><strong>Technical Capability ≠ Legal Permission:</strong> The fact that this software can technically download from a platform does NOT mean you have legal permission to do so.</li>
+                        <li><strong>Legal Consequences:</strong> Violating platform Terms of Service or copyright law may result in:
+                            <ul>
+                                <li>Account termination or permanent ban</li>
+                                <li>Legal action from platforms or copyright holders</li>
+                                <li>Civil lawsuits and monetary damages</li>
+                                <li>Criminal prosecution in severe cases</li>
+                                <li>Permanent loss of access to services</li>
+                            </ul>
+                        </li>
+                        <li><strong>Indemnification:</strong> You agree to indemnify and hold harmless the developer from any claims, damages, or legal actions arising from your use of this software.</li>
+                        <li><strong>No Legal Advice:</strong> This software and documentation do not constitute legal advice. Consult with a legal professional if you have questions about your rights and obligations.</li>
+                    </ul>
+                    <p style="color: #f56565; font-size: 1.05em; font-weight: bold; margin-top: 15px;">If you do not agree to these terms, do not use this software.</p>
+                    <p style="margin-top: 10px;"><strong>For complete legal terms, please refer to the End User License Agreement (EULA) included with this software.</strong></p>
+                </div>
+            </div>
+            
+            <div class="info-box" style="margin-top: 20px;">
+                <div class="box-icon">📧</div>
+                <div class="box-content">
+                    <h4>Support</h4>
+                    <p>For technical support, please provide:</p>
+                    <ul>
+                        <li>Windows version (run 'winver' command)</li>
+                        <li>Error messages (if any)</li>
+                        <li>Steps to reproduce the issue</li>
+                        <li>Log window content (copy text from the log)</li>
+                    </ul>
+                    <p style="margin-top: 10px;"><strong>Note:</strong> Support does not include legal advice on what content you may download or assistance with violating platform Terms of Service.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p><strong>Voltrim Video Downloader v1.0.0</strong></p>
+            <p>User Manual v1.2 - Last Updated: January 2025</p>
+            <p>Powered by <a href="https://github.com/yt-dlp/yt-dlp" style="color: white; text-decoration: underline;">yt-dlp</a> and <a href="https://ffmpeg.org" style="color: white; text-decoration: underline;">FFmpeg</a></p>
+            <p>© 2025 Voltrim Knowledge - All Rights Reserved</p>
+            <p style="font-size: 0.85em; margin-top: 10px;">Legal Notice: This software is provided for legal downloads only. Users must comply with all applicable laws, copyright regulations, and platform Terms of Service.</p>
+            <p style="font-size: 0.8em; margin-top: 5px;">Changes in v1.2: Enhanced legal notices with specific platform examples and pre-download checklist</p>
+        </div>
+    </div>
+    
+    <a href="#" class="back-to-top" title="Back to top">↑</a>
+    
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+        
+        // Back to top button visibility
+        const backToTop = document.querySelector('.back-to-top');
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                backToTop.style.display = 'flex';
+            } else {
+                backToTop.style.display = 'none';
+            }
+        });
+        
+        // Initial hide of back to top button
+        backToTop.style.display = 'none';
+        
+        // Fix image paths to use absolute paths based on HTML file location
+        (function() {
+            const htmlPath = window.location.href;
+            const htmlDir = htmlPath.substring(0, htmlPath.lastIndexOf('/') + 1);
+            
+            // Fix all images with relative paths
+            document.querySelectorAll('img[src]').forEach(function(img) {
+                const src = img.getAttribute('src');
+                // Only fix relative paths (not data: or http:)
+                if (src && !src.startsWith('data:') && !src.startsWith('http') && !src.startsWith('file:')) {
+                    img.src = htmlDir + src;
+                    img.onerror = function() {
+                        // Hide image if not found
+                        this.style.display = 'none';
+                    };
+                }
+            });
+        })();
+    </script>
+</body>
+</html>
