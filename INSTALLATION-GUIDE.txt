@@ -1,0 +1,156 @@
+VOLTRIM FLIPCRAFT — INSTALLATION GUIDE
+Copyright © 2026 Voltrim Creative Minds
+===============================================================================
+
+SYSTEM REQUIREMENTS
+
+  OS          : Windows 10 (version 1903 or later) or Windows 11 (64-bit)
+  RAM         : 2 GB minimum, 4 GB recommended
+  Disk        : 200 MB free space
+  Internet    : Required on first launch only (Poppler download, ~25 MB)
+
+  Basic edition : No additional software required
+  Pro edition   : WebView2 Runtime (pre-installed on Windows 10/11)
+  Word Doc mode : Microsoft Word or LibreOffice (free) — Pro edition only
+
+-------------------------------------------------------------------------------
+INSTALLING VOLTRIM FLIPCRAFT
+-------------------------------------------------------------------------------
+
+1. Download the installer:
+     VoltrimFlipCraftBasic-Setup-1.0.0.exe  (Basic edition)
+     VoltrimFlipCraftPro-Setup-1.0.0.exe    (Pro edition)
+
+2. Double-click the installer file.
+
+3. If Windows SmartScreen shows a warning:
+     - Click "More info"
+     - Click "Run anyway"
+   This warning appears for new software without a code-signing certificate.
+   Voltrim FlipCraft is safe to install.
+
+4. Follow the on-screen installation steps:
+     - Read the Welcome screen and click Next
+     - Review and accept the End User Licence Agreement
+     - Choose whether to create a Desktop shortcut
+     - Click Install
+
+5. Click Finish. Voltrim FlipCraft launches automatically.
+
+-------------------------------------------------------------------------------
+FIRST LAUNCH — POPPLER DOWNLOAD
+-------------------------------------------------------------------------------
+
+On first launch, Voltrim FlipCraft automatically downloads the Poppler PDF
+rendering engine (~25 MB) from GitHub. This is a one-time download.
+
+Requirements:
+  - Active internet connection during first launch only
+  - Approximately 1–2 minutes depending on your connection speed
+
+If the download fails:
+  1. Check your internet connection
+  2. Ensure your firewall or antivirus is not blocking the application
+  3. Try launching as Administrator (right-click → Run as administrator)
+  4. Manual install: download from https://github.com/oschwartz10612/poppler-windows
+     Extract and copy the Library\bin folder contents into:
+     C:\Program Files\VoltrimFlipCraftBasic\poppler\   (Basic)
+     C:\Program Files\VoltrimFlipCraftPro\poppler\     (Pro)
+
+-------------------------------------------------------------------------------
+FIRST FLIPBOOK — WEBVIEW2 TOOLS (Pro edition only)
+-------------------------------------------------------------------------------
+
+The Pro edition compiles a native viewer executable (.exe) for each flipbook
+using .NET Framework's csc.exe compiler, which is pre-installed on all modern
+Windows PCs.
+
+On first flipbook creation, the app also downloads Microsoft WebView2 display
+libraries (~4 MB) from NuGet. This is a one-time download stored in:
+  C:\Users\[YourName]\AppData\Roaming\VoltrimFlipCraftBasic\tools\
+
+After this one-time setup, all flipbook creation works completely offline.
+
+-------------------------------------------------------------------------------
+UNDERSTANDING YOUR FLIPBOOK OUTPUT (Pro edition)
+-------------------------------------------------------------------------------
+
+Each flipbook you create produces two files in the output folder:
+
+  [Title].exe  — The viewer application. Contains the decryption key.
+  [Title].dat  — The encrypted flipbook content.
+
+IMPORTANT: Both files must stay in the same folder at all times.
+When delivering flipbooks to others, always send both files together.
+
+The viewer decrypts the .dat content into a temporary folder at runtime
+and deletes it automatically when the viewer is closed.
+
+-------------------------------------------------------------------------------
+SILENT / ENTERPRISE INSTALLATION
+-------------------------------------------------------------------------------
+
+The installer supports silent installation for enterprise deployment:
+
+  VoltrimFlipCraftBasic-Setup-1.0.0.exe /SILENT
+  VoltrimFlipCraftBasic-Setup-1.0.0.exe /VERYSILENT /SUPPRESSMSGBOXES
+  VoltrimFlipCraftPro-Setup-1.0.0.exe   /SILENT
+  VoltrimFlipCraftPro-Setup-1.0.0.exe   /VERYSILENT /SUPPRESSMSGBOXES
+
+-------------------------------------------------------------------------------
+UNINSTALLING
+-------------------------------------------------------------------------------
+
+Method 1: Windows Settings
+  Settings → Apps → Voltrim FlipCraft → Uninstall
+
+Method 2: Control Panel
+  Control Panel → Programs → Programs and Features → Voltrim FlipCraft → Uninstall
+
+Method 3: Start Menu
+  Start → Voltrim FlipCraft → Uninstall Voltrim FlipCraft
+
+Note: Your generated flipbook files are NOT deleted during uninstallation.
+      Only the application itself is removed.
+
+-------------------------------------------------------------------------------
+UPGRADING
+-------------------------------------------------------------------------------
+
+To upgrade from an earlier version:
+  1. Download and run the new installer
+  2. The installer will automatically remove the old version first
+  3. Your settings and generated flipbooks are preserved
+
+-------------------------------------------------------------------------------
+TROUBLESHOOTING
+-------------------------------------------------------------------------------
+
+Problem : "Windows protected your PC" SmartScreen warning
+Solution: Click "More info" then "Run anyway". Normal for new software
+          without a code-signing certificate. The application is safe.
+
+Problem : Poppler fails to download on first launch
+Solution: Temporarily disable antivirus, then relaunch. Or install Poppler
+          manually using the instructions in the FIRST LAUNCH section above.
+
+Problem : "csc.exe not found" error during flipbook creation (Pro edition)
+Solution: Ensure .NET Framework 4.5 or later is installed on your PC.
+          Download from: https://dotnet.microsoft.com/en-us/download/dotnet-framework
+
+Problem : WebView2 DLLs fail to download (Pro edition, first flipbook)
+Solution: Check your internet connection. Try running the application as
+          Administrator. Ensure firewall is not blocking outbound HTTPS.
+
+Problem : Generated .exe shows error "Content file not found: [Title].dat"
+Solution: The .dat file is missing or has been moved. Ensure both [Title].exe
+          and [Title].dat are in the same folder, then relaunch the .exe.
+
+Problem : Generated .exe fails to open flipbook
+Solution: Update WebView2 Runtime via Windows Update, or download from:
+          https://developer.microsoft.com/en-us/microsoft-edge/webview2/
+
+For all other issues:
+  Email  : voltrimcreativeminds@gmail.com
+  Website: https://voltrim-flipcraft.netlify.app
+===============================================================================

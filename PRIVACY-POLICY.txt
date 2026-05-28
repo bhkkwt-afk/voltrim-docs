@@ -1,0 +1,111 @@
+VOLTRIM FLIPCRAFT — PRIVACY POLICY
+Copyright © 2026 Voltrim Creative Minds
+Last updated: January 2026
+===============================================================================
+
+This Privacy Policy explains how Voltrim FlipCraft ("the Software"), developed
+and published by Voltrim Creative Minds, handles your information.
+
+-------------------------------------------------------------------------------
+1. DATA COLLECTION
+-------------------------------------------------------------------------------
+
+Voltrim FlipCraft collects NO personal data whatsoever.
+
+The Software:
+  ✗  Does not collect your name, email address, or any identifying information
+  ✗  Does not transmit your PDF files, images, or documents to any server
+  ✗  Does not upload your generated flipbooks to any cloud service
+  ✗  Does not track how you use the application
+  ✗  Does not include analytics, telemetry, or crash reporting
+  ✗  Does not require user registration or an account of any kind
+
+-------------------------------------------------------------------------------
+2. NETWORK REQUESTS
+-------------------------------------------------------------------------------
+
+The Software makes the following limited and transparent network requests:
+
+  (a) POPPLER DOWNLOAD — First launch only
+      The Poppler PDF rendering engine (~25 MB) is downloaded from GitHub
+      (https://github.com/oschwartz10612/poppler-windows) on first launch.
+      No personal data is transmitted. This is a one-time download.
+
+  (b) WEBVIEW2 DLLS — First flipbook creation (Pro edition only)
+      Microsoft WebView2 display libraries (~4 MB) are downloaded from
+      NuGet (https://api.nuget.org) on the first Pro flipbook creation.
+      No personal data is transmitted. This is a one-time download.
+
+  (c) POPPLER UPDATE CHECK — Only when you click "Check Updates"
+      The app contacts GitHub to check for a newer version of Poppler.
+      No personal data is transmitted.
+
+All other operations — PDF rendering, flipbook creation, encryption,
+compilation — are performed entirely on your local machine.
+
+-------------------------------------------------------------------------------
+3. YOUR GENERATED CONTENT
+-------------------------------------------------------------------------------
+
+All content you create using the Software — including source files (PDFs,
+images, Word documents) and generated flipbooks (.exe and .dat files) —
+remains entirely on your computer at all times.
+
+Voltrim Creative Minds has no access to, and makes no claim over, any content
+you create using the Software.
+
+-------------------------------------------------------------------------------
+4. LOCAL DATA STORAGE
+-------------------------------------------------------------------------------
+
+The Software writes only the following data to your computer:
+
+  • Poppler PDF engine files — stored in the application installation folder
+  • WebView2 DLL files (Pro) — stored in:
+    C:\Users\[YourName]\AppData\Roaming\VoltrimFlipCraftBasic\tools\
+  • Temporary decryption folder — created in your system Temp folder during
+    flipbook viewing, deleted automatically when the viewer is closed
+  • Application settings — stored in Windows Registry under:
+    HKEY_LOCAL_MACHINE\Software\VoltrimFlipCraftBasic (or Pro)
+
+-------------------------------------------------------------------------------
+5. THIRD-PARTY SERVICES
+-------------------------------------------------------------------------------
+
+The Software interacts with the following third-party services solely to
+download required components (see Section 2):
+
+  • GitHub (github.com) — Poppler download
+  • NuGet (api.nuget.org) — WebView2 DLL download (Pro edition)
+
+These services have their own privacy policies. Voltrim Creative Minds does
+not control and is not responsible for the privacy practices of these services.
+
+-------------------------------------------------------------------------------
+6. CHILDREN'S PRIVACY
+-------------------------------------------------------------------------------
+
+Voltrim FlipCraft does not collect any data from anyone, including children
+under the age of 13. The Software is suitable for use by individuals of any
+age, subject to the End User Licence Agreement.
+
+-------------------------------------------------------------------------------
+7. CHANGES TO THIS POLICY
+-------------------------------------------------------------------------------
+
+If this Privacy Policy changes in future versions of the Software, the updated
+policy will be included in the new installer and documentation. The "Last
+updated" date at the top of this document will reflect the most recent change.
+
+-------------------------------------------------------------------------------
+8. CONTACT
+-------------------------------------------------------------------------------
+
+If you have any questions about this Privacy Policy, please contact:
+
+  Email  : voltrimcreativeminds@gmail.com
+  Website: https://voltrim-flipcraft.netlify.app
+
+===============================================================================
+© 2026 Voltrim Creative Minds. All rights reserved.
+===============================================================================
