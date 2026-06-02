@@ -3,7 +3,7 @@ Transform any document into a protected interactive flipbook
 ===============================================================================
 Version  : 1.0.0
 Publisher: Voltrim Creative Minds
-Website  : https://voltrim-flipcraft.netlify.app
+Website  : https://voltrim-flipcraft-pro.netlify.app
 Support  : voltrimcreativeminds@gmail.com
 Copyright: © 2026 Voltrim Creative Minds. All rights reserved.
 ===============================================================================
@@ -86,5 +86,5 @@ LICENCE & LEGAL
 
 ===============================================================================
 Thank you for choosing Voltrim FlipCraft!
-© 2026 Voltrim Creative Minds — https://voltrim-flipcraft.netlify.app
+© 2026 Voltrim Creative Minds — https://voltrim-flipcraft-pro.netlify.app
 ===============================================================================
