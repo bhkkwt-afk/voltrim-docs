@@ -1,0 +1,70 @@
+VOLTRIM FLIPCRAFT — THIRD-PARTY COMPONENT NOTICES
+Copyright © 2026 Voltrim Creative Minds
+===============================================================================
+
+Voltrim FlipCraft includes or depends on the following open-source and
+third-party components. Their licences and notices are reproduced below as
+required by their respective terms.
+
+-------------------------------------------------------------------------------
+1. POPPLER
+-------------------------------------------------------------------------------
+Name    : Poppler
+Version : 24.08.0 (primary), 23.11.0 (fallback)
+Purpose : PDF rendering engine (pdftoppm.exe, pdfinfo.exe)
+Source  : https://poppler.freedesktop.org
+Windows : https://github.com/oschwartz10612/poppler-windows
+Licence : GNU General Public License, Version 2 (GPL v2)
+
+Voltrim FlipCraft uses Poppler to convert PDF pages into images. As required
+by the GPL v2, the Poppler source code is freely available at the links above.
+Voltrim Creative Minds' own source code is not subject to the GPL by virtue
+of this use.
+
+Full GPL v2 licence text: https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+
+-------------------------------------------------------------------------------
+2. MICROSOFT WEBVIEW2 RUNTIME  (Pro edition only)
+-------------------------------------------------------------------------------
+Name    : Microsoft Edge WebView2 Runtime
+Purpose : Embedded browser engine for Pro flipbook viewer
+Source  : https://developer.microsoft.com/en-us/microsoft-edge/webview2/
+Licence : Microsoft Software Licence Terms for WebView2
+
+The WebView2 Runtime is a component of Microsoft Windows 10 and Windows 11
+and is subject to Microsoft's licence terms. It is not distributed by Voltrim
+Creative Minds — it is pre-installed by Microsoft on supported Windows versions.
+
+WebView2 SDK (Microsoft.Web.WebView2.WinForms.dll):
+  NuGet  : https://www.nuget.org/packages/Microsoft.Web.WebView2
+  Licence: https://www.nuget.org/packages/Microsoft.Web.WebView2/1.0.2088.41/License
+
+-------------------------------------------------------------------------------
+3. MICROSOFT .NET FRAMEWORK — CSC.EXE  (Pro edition build process)
+-------------------------------------------------------------------------------
+Name    : Microsoft .NET Framework C# Compiler (csc.exe)
+Purpose : Compiles the Pro flipbook viewer C# source into a Windows executable
+          at flipbook creation time
+Source  : Pre-installed with .NET Framework 4.x on Windows
+Licence : Microsoft Software Licence Terms
+
+csc.exe is a component of Microsoft .NET Framework pre-installed on all
+modern Windows PCs. It is not bundled with or distributed by Voltrim Creative
+Minds. It is invoked during flipbook creation to compile the viewer executable.
+
+-------------------------------------------------------------------------------
+4. AUDIO ASSETS
+-------------------------------------------------------------------------------
+The flipbook sounds (page flip, book open, book close) are royalty-free audio
+files included under their respective royalty-free licences.
+
+thick-page-flip.mp3 — royalty-free page-flip sound effect.
+
+If you have licensed specific audio files for use with this product, the
+appropriate attribution required by your licence should be noted here.
+
+===============================================================================
+For questions about third-party licences:
+  Email  : voltrimcreativeminds@gmail.com
+  Website: https://voltrim-flipcraft-pro.netlify.app
+===============================================================================

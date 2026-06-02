@@ -1,0 +1,235 @@
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  🎬  VOLTRIM FLIPCRAFT PRO — Windows Flipbook Creator
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Turn any PDF, image collection, or Word document into a stunning,
+animated page-turning flipbook — for personal enjoyment, sharing
+with loved ones, or selling as protected digital content.
+
+Whether you want to relive your wedding photos as a beautiful
+interactive album, share travel memories with friends and family,
+create course materials for students, or sell digital books to
+customers — Voltrim FlipCraft Pro handles it all from one simple desktop app.
+
+💳  One payment of $29.  No subscription.  No monthly fees.  Forever yours.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  📖  WHAT IS A FLIPBOOK?
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+A flipbook is an interactive digital document that opens like a real
+book — pages turn with a smooth 3D animation, there is a progress
+bar, keyboard navigation, and a fullscreen mode.
+
+The output is a professional Windows viewer (.exe) that anyone can
+simply double-click to open — no browser, no internet, and no
+installation required.
+
+✅  No browser needed
+✅  No internet required to view
+✅  No installation required
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  🛠️  WHAT YOU CAN CREATE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📄  PDF Flipbooks
+    Import any PDF and convert it into a page-turning flipbook.
+    Choose from three quality settings:
+      • Screen (96 DPI)   — optimised for on-screen viewing
+      • Standard (150 DPI) — balanced quality for most documents
+      • High (300 DPI)    — sharp, print-quality output
+
+🖼️  Photo Albums
+    Select a folder of JPG, PNG, or WEBP images to create a
+    beautiful interactive photo album or portfolio. Perfect for
+    wedding photos, travel collections, and personal memories.
+
+📝  Lecture Notes & Textbooks
+    Import .docx or .doc files using Microsoft Word or the free
+    LibreOffice app — perfect for course materials, study guides,
+    and educational content.
+
+🔗  Merged Flipbooks
+    Combine multiple PDFs and Word documents into one unified
+    flipbook in any order — ideal for compiled reports, course
+    packs, and multi-chapter publications.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  ⭐  KEY FEATURES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+💳  One-time payment
+    Pay once, create unlimited flipbooks forever.
+    No renewal, no expiry, no hidden fees.
+
+♾️  No page limits
+    Create flipbooks of any size — 10 pages or 1,000 pages.
+    No restrictions whatsoever.
+
+🚫  No watermarks — ever
+    Your flipbooks are 100% yours. Nothing added, nothing hidden.
+    Completely professional output.
+
+🔒  Built-in content protection
+    Every flipbook is encrypted with a unique per-document key.
+    Viewers cannot extract or copy your content.
+
+💻  100% offline
+    Runs entirely on your computer. No internet required after
+    first setup. Zero telemetry. Zero data collection.
+
+⚡  Native Windows viewer
+    Outputs a professional Windows .exe with smooth 3D page-flip
+    animations, keyboard navigation, and fullscreen mode.
+
+🎨  Automatic cover pages
+    Professionally styled front and back covers generated
+    automatically for every flipbook.
+
+📊  Three quality settings
+    Choose the right output resolution for your purpose:
+      • Screen (96 DPI)    — fast, lightweight, on-screen viewing
+      • Standard (150 DPI) — ideal for most documents and albums
+      • High (300 DPI)     — crisp detail for text-heavy content
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  🔐  CONTENT PROTECTION — HOW IT WORKS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Unlike other flipbook tools that deliver a readable HTML file,
+FlipCraft Pro protects your content using encryption.
+
+Every flipbook you create produces two files:
+
+  ⚙️  [Title].exe  —  The viewer application
+                       Contains the unique decryption key.
+
+  🔑  [Title].dat  —  Your encrypted flipbook content
+                       Completely unreadable without the .exe.
+
+How the protection works:
+
+  🔸  Unique encryption key per flipbook — each document gets its
+      own key, so one key cannot unlock another.
+
+  🔸  No extractable HTML or images — viewers cannot open,
+      copy, or repurpose your source content.
+
+  🔸  Temporary access only — content is decrypted into a hidden
+      system folder at runtime and deleted when the viewer closes.
+
+  🔸  Native Windows viewer — just double-click the .exe.
+      No browser, no plugins, no installation needed.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  📦  DELIVERING YOUR FLIPBOOK
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Each flipbook is two files. Keep them together and share them by
+email, Google Drive, USB drive, or any file-sharing platform:
+
+  1️⃣  [Title].exe — double-click to open the flipbook instantly
+  2️⃣  [Title].dat — must stay in the same folder as the .exe
+
+No installation required on the receiving end.
+No browser. No internet. Works on any Windows 10 or Windows 11 PC.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  👥  WHO IS THIS FOR?
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+💑  Couples & families — personal memories
+    Turn your wedding photos, honeymoon pictures, family
+    holiday shots, or travel adventures into a beautiful
+    interactive flipbook. Relive your favourite moments
+    any time — or share with family and friends by simply
+    sending two files. No social media, no cloud — just
+    a private, personal keepsake that plays like a real
+    photo album on any Windows PC.
+
+    Perfect for:
+      🥂  Wedding & engagement photo albums
+      ✈️  Travel & holiday memory books
+      🎂  Birthday & anniversary celebrations
+      👶  Baby's first year albums
+      🏡  Family reunion & gathering collections
+      🎓  Graduation & milestone photo books
+
+🌍  Travellers & adventurers
+    You explored amazing places and took hundreds of photos.
+    Now organise them into a flipbook — by destination, by
+    trip, or by year — and experience your travels all over
+    again with every page turn. Share with fellow travellers
+    or keep it as your personal travel diary.
+
+📚  Self-publishers & indie authors
+    Sell your books as protected digital flipbooks instead of
+    raw PDFs that can be freely shared.
+
+🎓  Educators & course creators
+    Package lecture notes, workbooks, and study guides as
+    protected flipbooks for your students.
+
+📷  Photographers & artists
+    Assemble your best work into premium interactive photo
+    albums and portfolios. Deliver client galleries as
+    elegant flipbook viewers instead of plain image folders.
+
+💼  Small businesses
+    Create product catalogs, annual reports, and marketing
+    materials as professional standalone applications.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  🖥️  SYSTEM REQUIREMENTS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  ✅  Windows 10 or Windows 11 (64-bit)
+  ✅  .NET Framework 4.5 or later (pre-installed on all modern PCs)
+  ✅  Internet: required on first launch only to download the
+      Poppler PDF engine (~25 MB, one-time). A further small
+      download (~4 MB, one-time) occurs on your first flipbook
+      creation to set up the viewer libraries. Fully offline
+      after that.
+  ✅  Word document mode: Microsoft Word or free LibreOffice
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  📋  WHAT IS INCLUDED IN YOUR PURCHASE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  ✔  Voltrim FlipCraft Pro installer (.exe)
+  ✔  User manual (HTML)
+  ✔  PDF creation mode (unlimited pages)
+  ✔  Image album creation mode (JPG, PNG, WEBP)
+  ✔  Word document creation mode (.docx / .doc)
+  ✔  Multi-document merge mode
+  ✔  Built-in content encryption (.dat output)
+  ✔  Professional 3D cover page generation
+  ✔  Native WebView2 viewer output
+  ✔  Three quality options: Screen (96 DPI), Standard (150 DPI),
+      High (300 DPI)
+  ✔  Free updates for the current major version
+  ✔  No watermarks — ever
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  🛡️  30-DAY MONEY-BACK GUARANTEE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+If FlipCraft Pro does not work as described on your Windows PC,
+contact us within 30 days for a full refund — no questions asked.
+
+  📧  Support  :  voltrimcreativeminds@gmail.com
+  🌐  Website  :  https://voltrim-flipcraft-pro.netlify.app
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  © 2026 Voltrim Creative Minds.  All rights reserved.
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
